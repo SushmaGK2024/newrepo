@@ -4,6 +4,7 @@ const db = require('./connection/databaseconnection'); // Adjust the path as nee
 const  cors=require('cors');
 const app = express();
 // Add this line to parse JSON bodies
+const port = 3001;
 app.use(express.json());
 
 
@@ -12,11 +13,12 @@ app.use(cors({
   origin: netlifyDomain,
   credentials: true
 }));
-app.use(function(req, res, next) {
-  res.header("Access-Control-Allow-Origin", "*");
-  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-  next();
-});
+app.options('*', cors());
+
+
+
+
+
 const usersRoutes = require('./routes/users.js');
 const experiencesRoutes = require('./routes/experiences.js');
 const placementsRoutes= require( './routes/placements.js' );

@@ -8,12 +8,14 @@ const mysql = require('mysql');
 
 // Create a MySQL connection pool
 const pool = mysql.createPool({
-  host: 'localhost',
-  user: 'root',
-  password: '',
-  database: 'placementexp',
+  host: process.env.MYSQLHOST, // Use the MYSQLHOST environment variable for the host
+  user: process.env.MYSQLUSER, // Use the MYSQLUSER environment variable for the user
+  password: process.env.MYSQLPASSWORD, // Use the MYSQLPASSWORD environment variable for the password
+  database: process.env.MYSQLDATABASE, // Use the MYSQLDATABASE environment variable for the database name
   connectionLimit: 10, // Adjust this based on your needs
 });
+
+
 function authenticateToken(req, res, next) {
   const token = req.header('Authorization');
 

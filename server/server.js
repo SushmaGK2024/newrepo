@@ -12,7 +12,7 @@ const port = 3001;
 // ...
 // Example in server.js
 app.use(cors({
-  origin: 'http://localhost:3000',
+  origin: 'https://newrepo-1.onrender.com/',
   credentials: true
 }));
 app.use(function(req, res, next) {

@@ -5,14 +5,11 @@ const  cors=require('cors');
 const app = express();
 // Add this line to parse JSON bodies
 app.use(express.json());
-const port = 3001;
 
-// Set up routes...
-// server/server.js
-// ...
-// Example in server.js
+
+const netlifyDomain = 'https://main--legendary-madeleine-b1810c.netlify.app'; // Update with your Netlify domain
 app.use(cors({
-  origin: process.env.MYSQLHOST,
+  origin: netlifyDomain,
   credentials: true
 }));
 app.use(function(req, res, next) {

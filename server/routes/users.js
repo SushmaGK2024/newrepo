@@ -13,6 +13,8 @@ const pool = mysql.createPool({
   password: process.env.MYSQLPASSWORD, // Use the MYSQLPASSWORD environment variable for the password
   database: process.env.MYSQLDATABASE, // Use the MYSQLDATABASE environment variable for the database name
   connectionLimit: 10, // Adjust this based on your needs
+  acquireTimeout: 30000,  // Time in milliseconds to wait for a connection from the pool
+  waitForConnections: true 
 });
 
 

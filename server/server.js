@@ -8,7 +8,6 @@ app.use(express.json());
 
 
 
-const cors = require('cors');
 app.use(cors({
   origin: 'https://jocular-sfogliatella-b1c3c5.netlify.app',
   credentials: true

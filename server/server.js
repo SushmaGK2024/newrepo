@@ -10,7 +10,7 @@ app.use(express.json());
 
 
 app.use(cors({
-  origin: 'https://jocular-sfogliatella-b1c3c5.netlify.app',
+  origin: 'https://majortrail1.netlify.app/',
   credentials: true
 }));
 

@@ -6,11 +6,14 @@ const port = 3001;
 // Add this line to parse JSON bodies
 app.use(express.json());
 
-// Set up CORS middleware
+
+
+const cors = require('cors');
 app.use(cors({
-  origin: 'https://main--jocular-sfogliatella-b1c3c5.netlify.app/', // Allow requests from your Netlify domain
+  origin: 'https://jocular-sfogliatella-b1c3c5.netlify.app',
   credentials: true
 }));
+
 
 // Define routes...
 const usersRoutes = require('./routes/users.js');

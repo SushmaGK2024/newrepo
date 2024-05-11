@@ -38,7 +38,7 @@ const Latest = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(`http://localhost:3001/experiences/experience`, {
+        const response = await axios.get(`https://majorsssssss.onrender.com/experiences/experience`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },

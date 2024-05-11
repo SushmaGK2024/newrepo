@@ -22,7 +22,7 @@ const ExperienceDetail = (props) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(`http://localhost:3001/experiences/getexperience/${id}`, {
+        const response = await axios.get(`https://majorsssssss.onrender.com/experiences/getexperience/${id}`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },

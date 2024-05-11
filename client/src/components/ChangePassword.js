@@ -38,7 +38,7 @@ const ChangePassword = (props) => {
     };
 
     try {
-      const response = await axios.post(`http://localhost:3001/users/change-password/${rollno}`, data, config);
+      const response = await axios.post(`https://majorsssssss.onrender.com/users/change-password/${rollno}`, data, config);
       console.log("Response:", response.data);
       alert("Password changed successfully!");
     } catch (error) {

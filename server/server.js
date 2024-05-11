@@ -8,7 +8,7 @@ app.use(express.json());
 
 // Set up CORS middleware
 app.use(cors({
-  origin: 'https://main--legendary-madeleine-b1810c.netlify.app', // Allow requests from your Netlify domain
+  origin: 'https://main--jocular-sfogliatella-b1c3c5.netlify.app/', // Allow requests from your Netlify domain
   credentials: true
 }));
 
